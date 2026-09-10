@@ -1,0 +1,5 @@
+# LetNet Robots Configuration
+User-agent: *
+Allow: /
+
+Sitemap: https://letnet.tech/sitemap.xml

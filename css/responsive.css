@@ -1,0 +1,236 @@
+/**
+ * LetNet Responsive Stylesheet
+ * Optimized for Mobile, Tablet, Laptop, and Desktop viewports
+ */
+
+/* ========================================================
+   1. LAPTOPS & TABLETS LANDSCAPE (Max 1024px)
+   ======================================================== */
+@media (max-width: 1024px) {
+  :root {
+    --header-height: 70px;
+  }
+
+  .section {
+    padding-block: 80px;
+  }
+
+  .section-hero {
+    padding-top: 120px;
+    padding-bottom: 60px;
+    min-height: auto;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .hero-visual-container {
+    height: 380px;
+  }
+
+  .card-grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card-grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .two-col-showcase {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .contact-layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+
+  /* Mobile Navigation Switch */
+  .mobile-menu-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--bg-surface);
+    flex-direction: column;
+    align-items: stretch;
+    padding: 32px 24px;
+    gap: 8px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-16px);
+    transition: all var(--transition-normal);
+    overflow-y: auto;
+    border-top: 1px solid var(--border-subtle);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  }
+
+  .nav-links.is-open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .nav-link {
+    font-size: 1.1rem;
+    padding: 14px 18px;
+    border-radius: var(--radius-md);
+    display: block;
+    width: 100%;
+  }
+
+  .mobile-nav-socials {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+    margin-top: 14px;
+    padding-top: 18px;
+    border-top: 1px solid var(--border-subtle);
+  }
+
+  .nav-actions {
+    margin-left: auto;
+    margin-right: 12px;
+  }
+}
+
+/* ========================================================
+   2. TABLETS PORTRAIT (Max 768px)
+   ======================================================== */
+@media (max-width: 768px) {
+  .section {
+    padding-block: 64px;
+  }
+
+  .section-inner-page-hero {
+    padding-top: 110px;
+    padding-bottom: 40px;
+  }
+
+  .section-header {
+    margin-bottom: 44px;
+  }
+
+  .hero-subtitle {
+    font-size: 1.05rem;
+  }
+
+  .hero-visual-container {
+    height: 320px;
+  }
+
+  .card-grid-3,
+  .card-grid-2,
+  .team-grid,
+  .pipeline-cards-row {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .hub-nodes-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hub-node-badge {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .cta-banner {
+    padding: 44px 24px;
+  }
+
+  .contact-card,
+  .contact-direct-card {
+    padding: 28px 20px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+
+  #back-to-top {
+    bottom: 20px;
+    right: 20px;
+    width: 42px;
+    height: 42px;
+  }
+}
+
+/* ========================================================
+   3. MOBILE PHONES (Max 480px)
+   ======================================================== */
+@media (max-width: 480px) {
+  .container,
+  .container-narrow {
+    padding-inline: 18px;
+  }
+
+  .brand-link {
+    font-size: 1.15rem;
+  }
+
+  .brand-logo-img {
+    height: 32px;
+  }
+
+  .hero-cta-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .hero-visual-container {
+    height: 280px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .service-card,
+  .community-card,
+  .team-card {
+    padding: 28px 20px;
+  }
+
+  .faq-question {
+    padding: 18px 18px;
+    font-size: 0.98rem;
+  }
+
+  .faq-answer {
+    padding-inline: 18px;
+  }
+}
