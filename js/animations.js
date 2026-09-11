@@ -19,11 +19,11 @@ class NetworkAnimation {
 
     // The 5 core pillars of LetNet
     this.anchorLabels = [
-      { text: "People", color: "#38BDF8" },
-      { text: "Ideas", color: "#818CF8" },
-      { text: "Technology", color: "#34D399" },
-      { text: "Businesses", color: "#F472B6" },
-      { text: "Opportunities", color: "#FBBF24" }
+      { text: "People", color: "#20E0C2" },
+      { text: "Ideas", color: "#7CFFF0" },
+      { text: "Technology", color: "#35BFFF" },
+      { text: "Businesses", color: "#5DD0E8" },
+      { text: "Opportunities", color: "#A8FFF4" }
     ];
 
     this.init();
@@ -144,7 +144,7 @@ class NetworkAnimation {
   drawConnections() {
     const maxDist = Math.min(140, this.width * 0.25);
     const isDark = document.documentElement.getAttribute('data-theme') !== 'light';
-    const lineColor = isDark ? "56, 189, 248" : "2, 132, 199";
+    const lineColor = isDark ? "32, 224, 194" : "0, 138, 136";
 
     for (let i = 0; i < this.nodes.length; i++) {
       for (let j = i + 1; j < this.nodes.length; j++) {
@@ -172,7 +172,7 @@ class NetworkAnimation {
         this.ctx.beginPath();
         this.ctx.moveTo(this.nodes[i].x, this.nodes[i].y);
         this.ctx.lineTo(this.mouse.x, this.mouse.y);
-        this.ctx.strokeStyle = `rgba(0, 242, 254, ${mAlpha})`;
+        this.ctx.strokeStyle = `rgba(32, 224, 194, ${mAlpha})`;
         this.ctx.lineWidth = 1;
         this.ctx.stroke();
       }
@@ -190,7 +190,7 @@ class NetworkAnimation {
         
         this.ctx.beginPath();
         this.ctx.arc(node.x, node.y, pulseRadius, 0, Math.PI * 2);
-        this.ctx.fillStyle = isDark ? `rgba(56, 189, 248, 0.15)` : `rgba(2, 132, 199, 0.12)`;
+        this.ctx.fillStyle = isDark ? `rgba(32, 224, 194, 0.15)` : `rgba(0, 138, 136, 0.12)`;
         this.ctx.fill();
 
         // Node center
@@ -204,7 +204,7 @@ class NetworkAnimation {
 
         // Label
         this.ctx.font = '600 12px "Plus Jakarta Sans", system-ui, sans-serif';
-        this.ctx.fillStyle = isDark ? '#F1F5F9' : '#0F172A';
+        this.ctx.fillStyle = isDark ? '#F2FFFC' : '#062128';
         this.ctx.textAlign = 'center';
         this.ctx.fillText(node.label, node.x, node.y - 12);
 
@@ -212,7 +212,7 @@ class NetworkAnimation {
         // Regular node
         this.ctx.beginPath();
         this.ctx.arc(node.x, node.y, node.radius, 0, Math.PI * 2);
-        const nodeColor = isDark ? `rgba(148, 163, 184, ${node.baseAlpha})` : `rgba(71, 85, 105, ${node.baseAlpha})`;
+        const nodeColor = isDark ? `rgba(124, 200, 210, ${node.baseAlpha})` : `rgba(0, 90, 100, ${node.baseAlpha})`;
         this.ctx.fillStyle = nodeColor;
         this.ctx.fill();
       }
